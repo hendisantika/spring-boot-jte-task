@@ -1,4 +1,14 @@
-# spring-boot-jte-task
+# Spring Boot & JTE & HTMX Tasks
+
+This project demonstrates a simple task management application built with Spring Boot, JTE (Java Template Engine), and HTMX. It showcases how to create a responsive web application with server-side rendering and dynamic updates.
+
+## Technologies Used
+
+- Java 23
+- Spring Boot 3.3.4
+- JTE (Java Template Engine)
+- HTMX (for dynamic frontend updates)
+- Maven (for dependency management and build)
 
 ### Things todo list
 
