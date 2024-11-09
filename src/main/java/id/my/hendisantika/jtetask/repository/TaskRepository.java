@@ -31,4 +31,8 @@ public class TaskRepository {
     public void create(Task task) {
         tasks.add(task);
     }
+
+    public boolean remove(String id) {
+        return tasks.removeIf(task -> task.getId().equals(id));
+    }
 }
