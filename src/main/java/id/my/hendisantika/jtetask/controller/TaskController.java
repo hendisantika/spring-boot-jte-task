@@ -1,11 +1,14 @@
 package id.my.hendisantika.jtetask.controller;
 
+import id.my.hendisantika.jtetask.model.Task;
 import id.my.hendisantika.jtetask.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by IntelliJ IDEA.
@@ -28,5 +31,13 @@ public class TaskController {
     public String index(Model model) {
         model.addAttribute("tasks", taskRepository.findAll());
         return "index";
+    }
+
+    @PostMapping("/add-task")
+    public String addTask(@RequestParam String description, Model model) {
+        Task newTask = new Task(description);
+        taskRepository.create(newTask);
+        model.addAttribute("task", newTask);
+        return "task-row";
     }
 }
