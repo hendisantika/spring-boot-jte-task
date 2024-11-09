@@ -55,8 +55,8 @@
                             </tr>
                             </thead>
                             <tbody id="taskTableBody" class="divide-y divide-gray-800">
-                            @for(task : tasks)
-                                @template.task-row(task = task)
+                            @for(id.my.hendisantika.jtetask.model.Task task1 : tasks)
+                                @template.task-row(task = task1)
                             @endfor
                             </tbody>
                         </table>
