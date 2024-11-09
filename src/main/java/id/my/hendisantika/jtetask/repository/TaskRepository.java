@@ -22,6 +22,9 @@ public class TaskRepository {
     private final List<Task> tasks = new ArrayList<>();
 
     public TaskRepository() {
+    }
 
+    public List<Task> findAll() {
+        return tasks;
     }
 }
